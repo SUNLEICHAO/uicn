@@ -1,10 +1,21 @@
 body {
-  height: 3000px;
+  height: 6000px;
+  margin: 0;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #34495e;
 }
 
 a {
   text-decoration: none;
-  color: #34495e;
+  color: inherit;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .container-1480 {
@@ -158,8 +169,7 @@ a {
 
 .banner-section {
   padding-top: 90px;
-  /* padding-top: 20px; */
-  background-color: #34495e;
+  background-color: #eff1f5;
 }
 
 .banner-list {
@@ -199,10 +209,345 @@ a {
   opacity: 1;
 }
 
-
 .banner-item {
   display: flex;
   width: 1480px;
   border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.opus-section {
+  margin: 0 auto;
+  background-color: #EFF1F5;
+}
+
+.opus-topic {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.opus-title-list {
+  display: flex;
+}
+
+.opus-title-item {
+  display: flex;
+  height: 40px;
+  padding: 0 20px;
+  margin-right: 25px;
+  font-size: 14px;
+  line-height: 40px;
+  color: #7c7c7c;
+  border-radius: 20px;
+}
+
+.opus-title-item:first-child {
+  font-weight: bold;
+  color: #3D7EFF;
+  border: 1px solid #3D7EFF;
+}
+
+.opus-title-item .icon-arrow {
+  /* 问题，iconfont的位置都是怎么摆放的 */
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  /* transform: rotate(90deg); */
+}
+
+.opus-title-note {
+  position: relative;
+  display: flex;
+  height: 40px;
+  padding: 0 110px 0 20px;
+  background-color: #fff7e7;
+  border-radius: 20px;
+}
+
+.opus-title-note__text {
+  max-width: 500px;
+  font-size: 14px;
+  color: #6b3612;
+  line-height: 40px;
+}
+
+.opus-title-note__iconlist {
+  position: absolute;
+  top: 8px;
+  right: -1px;
+  display: flex;
+}
+
+.opus-title-note__icon-item .iconfont {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 9px;
+  background-color: #e67e22;
+  border-radius: 50%;
+}
+
+.opus-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.opus-item {
+  position: relative;
+  width: 280px;
+  transition: all .2s ease;
+  margin: 0 20px 15px 0;
+}
+
+.opus-item:nth-child(5n) {
+  margin-right: 0px;
+}
+
+.opus-item:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+.opus-item-shadow {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.opus-item:hover .opus-item-shadow {
+  opacity: 1;
+}
+
+.opus-item-cover {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 210px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.opus-item-cover__img {
+  transition: transform .2s ease;
+}
+
+.opus-item:hover .opus-item-cover__img {
+  transform: scale(1.05);
+}
+
+.opus-item-content {
+  position: relative;
+  z-index: 2;
+  padding: 5px 0 10px 5px;
+}
+
+.opus-item-title {
+  max-width: 217px;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5714285;
+  color: #34495e;
+}
+
+.opus-item-info {
+  display: flex;
+  height: 21px;
+  margin-top: 5px;
+}
+
+.opus-item-info__tag {
+  display: inline-block;
+  height: 20px;
+  padding: 0 5px;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 19px;
+  color: #9fb0bd;
+  border-radius: 3px;
+  background-color: #dfe5e9;
+}
+
+.opus-item-info__icon {
+  display: inline-flex;
+  margin-right: 14px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9fb0bd;
+}
+
+
+.opus-item-info .iconfont {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 18px;
+  height: 21px;
+  margin-right: 5px;
+}
+
+.opus-item-info__slogan {
+  line-height: 21px;
+}
+
+.opus-item-author {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 7px;
+}
+
+.opus-item-author__wrapper {
+  display: flex;
+}
+
+.opus-item-author__avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.opus-item-author__name {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  line-height: 18px;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.opus-item:hover .opus-item-author__name {
+  color: #3d7eff;
+}
+
+.opus-item-author__name .iconfont {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  margin-left: 3px;
+  background-color: #3D7EFF;
+}
+
+.opus-item-author__focus {
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #3d7eff;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.opus-item-author__focus.ad {
+  color: #BFC4CD;
+}
+
+.opus-item:hover .opus-item-author__focus {
+  opacity: 1;
+}
+
+.opus-item-author__focus:hover {
+  background-color: #3d7eff;
+  color: #fff;
+}
+
+.opus-item-author__focus.ad:hover {
+  background-color: #eff3f6;
+  color: #BFC4CD;
+}
+
+.opus-item-recommended__img {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.opus-item:hover .opus-item-recommended__img {
+  opacity: 1;
+}
+
+.opus-pagination-list {
+  justify-content: center;
+  display: flex;
+  height: 40px;
+  padding: 5px 0 20px;
+}
+
+.opus-pagination-item {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 15px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 40px;
+  color: #606266;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid rgba(191, 196, 205, .6);
+  cursor: pointer;
+}
+
+.opus-pagination-item:first-child {
+  color: #fff;
+  background-color: #3d7eff;
+  border-color: #3d7eff;
+}
+
+.opus-pagination-item:last-child {
+  line-height: 28px;
+}
+
+.opus-pagination-item:not(:first-child):hover {
+  background-color: rgba(61, 126, 255, .1);
+}
+
+.hot-section {
+  padding: 40px 0;
+  background-color: #e9eef2;
+}
+
+.hot-topic {
+  height: 21px;
+  display: flex;
+  font-size: 14px;
+  color: #717171;
+  justify-content: space-between;
+}
+
+.hot-list {
+  margin-top: 20px;
+  display: flex;
+}
+
+.hot-item {
+  width: 230px;
+  height: 498px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: url(../img/hot-1.png) no-repeat 0 0/100% 85%;
   overflow: hidden;
 }
