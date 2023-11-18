@@ -1,0 +1,208 @@
+body {
+  height: 3000px;
+}
+
+a {
+  text-decoration: none;
+  color: #34495e;
+}
+
+.container-1480 {
+  width: 1480px;
+  margin: 0 auto;
+}
+
+/* 以上为通用样式 */
+.page-header {
+  position: fixed;
+  width: 100vw;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.header-container {
+  justify-content: space-between;
+  display: flex;
+  height: 70px;
+}
+
+.header-left {
+  align-items: center;
+  display: flex;
+}
+
+.header-logo {
+  display: flex;
+}
+
+.header-logo__img {
+  width: 80px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.header-navlist {
+  display: flex;
+}
+
+.header-nav-item {
+  align-items: center;
+  display: inline-flex;
+  padding: 16px 20px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-top: 4px solid transparent;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.header-nav-item:hover {
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+  border-top: 4px solid #3D7EFF;
+}
+
+.header-nav-item:first-child {
+  color: #3D7EFF;
+}
+
+.header-nav-item .icon-xxx {
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  margin-left: 3px;
+  background-color: #000;
+}
+
+.header-nav-item .icon-shenglvehao {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  font-size: 28px;
+}
+
+.header-right {
+  align-items: center;
+  display: flex;
+}
+
+.header-search,
+.header-upload {
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 50px;
+  height: 70px;
+  border-top: 4px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding: 16px 0 20px;
+  color: #d4dce2;
+  cursor: pointer;
+}
+
+.header-upload {
+  width: 60px;
+  border-top-color: transparent;
+  transition: all .2s ease;
+}
+
+.header-search:hover,
+.header-upload:hover {
+  color: #3D7EFF;
+  border-top-color: #3D7EFF;
+}
+
+.header-search::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  height: 20px;
+  border-right: 1px solid #ecf0f1;
+}
+
+.header-search .icon-search {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-upload .icon-shangchuan {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-login {
+  /* 问题，原网页是怎么实现的摆放 */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 60px;
+  height: 66px;
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 66px;
+  color: #3D7EFF;
+  text-align: center;
+  border-top: 4px solid transparent;
+}
+
+.header-login .icon-xxx {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #3D7EFF;
+}
+
+.banner-section {
+  padding-top: 90px;
+  /* padding-top: 20px; */
+  background-color: #34495e;
+}
+
+.banner-list {
+  position: relative;
+  width: 1480px;
+  height: 350px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.banner-list::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 100%;
+  background: url(../img/slide-btnl.jpg) no-repeat 0 50%/25px;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+.banner-list::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 65px;
+  height: 100%;
+  background: url(../img/slide-btnr.jpg) no-repeat 100% 50%/25px;
+  transition: all .3s ease;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.banner-section:hover .banner-list::before,
+.banner-section:hover .banner-list:after {
+  opacity: 1;
+}
+
+
+.banner-item {
+  display: flex;
+  width: 1480px;
+  border-radius: 5px;
+  overflow: hidden;
+}
